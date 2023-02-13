@@ -1,0 +1,226 @@
+ <form action="" method="post">
+          @csrf
+          <div class="first bg-light px-3">
+          <div class="row ">
+            <div class="col-md-3 pt-3">
+            <div class="form-group">
+              <label for="semister">Semister</label>
+              <select name="semister" id="semister" >
+                <option value="">--Select Semister--</option>
+                <option value="spring">Spring</option>
+                <option value="summer">Summer</option>
+              </select>
+             </div>
+            </div>
+            <div class="col-md-3 pt-3">
+            <div class="form-group">
+              <label for="year">Year</label>
+              <select name="year" id="year" >
+                <option value="">--Select Year--</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+             </div>
+
+            </div>
+            <div class="col-md-3 pt-3">
+            <div class="form-group">
+              <label for="program">Program</label>
+              <select name="program" id="program" ">
+                <option value="">--Select Program--</option>
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="CEN">CEN</option>
+              </select>
+             </div>
+            </div>
+            <div class="col-md-3 pt-3">
+            <div class="form-group">
+            <label for="phase">Phase</label>
+              <select name="phase" id="phase">
+                <option value="">--Select Phase--</option>
+                <option value="project">Project</option>
+                <option value="thesis">Thesis</option>
+              </select>
+             </div>
+            </div>
+
+          </div>
+          </div>
+          <div class="row bg-transparent pt-3"></div>
+
+          @foreach($group_id->group_details as $data) 
+          <div class="2nd bg-light px-3 py-2">
+          <div class="row ">
+         
+            <div class="col-md-3 ">   
+             <div class="form-group">
+              <label for="s_id">Student Id</label> 
+             
+              <input type="text" name="s_id" id="s_id" placeholder="Student_id" class="form-control" value="{{optional($data)->student_id}}">
+           
+              <span class="text-danger">
+                @error('s_id')
+                  {{ $message }}
+                @enderror
+              </span>
+             </div>
+             </div> 
+             <div class="col-md-3 "> 
+             <div class="form-group">
+              <label for="name">Name</label> 
+              <input type="text" name="name" id="name" placeholder="Enter Your Name" class="form-control" value="">
+              <span class="text-danger">
+                @error('name')
+                  {{ $message }}
+                @enderror
+              </span>
+             </div>
+             </div>
+             <div class="col-md-3 "> 
+             <div class="form-group">
+              <label for="name"> Email</label> 
+              <input type="text" name="name" id="name" placeholder="Enter Your Email" class="form-control" value="">
+              <span class="text-danger">
+                @error('name')
+                  {{ $message }}
+                @enderror
+              </span>
+             </div>
+             </div>
+             <div class="col-md-3 "> 
+             <div class="form-group">
+              <label for="name">CGPA</label> 
+              <input type="text" name="name" id="name" placeholder="Enter Your CGPA" class="form-control" value="">
+              <span class="text-danger">
+                @error('name')
+                  {{ $message }}
+                @enderror
+              </span>
+             </div>
+             </div>
+           
+            
+            
+             
+           </div>
+           
+           </div>
+           @endforeach 
+        <!-- <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+            <label for="supervisor">Supervisor</label>
+              <select name="supervisor" id="supervisor" class="form-control">
+                <option value="">--Select Supervisor--</option>
+                <option value="project">Project</option>
+              </select>
+             </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+            <label for="project">Project/Thisis</label>
+              <select name="project" id="project" class="form-control">
+                <option value="">--Select Project/Thisis--</option>
+                <option value="project">Project</option>
+              </select>
+             </div>
+          </div>
+        </div> -->
+          <div class="row">
+
+             <div class="form-group">
+               <label for="description">Product Description</label>
+               <textarea name="description" id="description" placeholder="Enter Product Description" class="form-control">{{ old('description') }}</textarea>
+
+              <span class="text-danger">
+                @error('description')
+                  {{ $message }}
+                @enderror
+              </span>
+             </div>
+
+             <div class="form-group">
+              <label for="category">Product Category</label>
+              <select name="category" id="category" class="form-control">
+                <option value="">-----Select Category-----</option>
+                <option value="Man" @if (old('category') == 'Man') selected @endif>Man</option>
+                <option value="Woman" @if (old('category') == 'Woman') selected @endif>Woman</option>
+                <option value="Children" @if (old('category') == 'Children') selected @endif>Children</option>
+              </select>
+             </div>
+
+             <div class="form-group">
+              <label for="size">Product Size</label> <select name="size" id="size" class="form-control">
+                <option value="">-----Select Size-----</option>
+                <option value="xl">xl</option>
+                <option value="m">m</option>
+                <option value="sm">sm</option>
+              </select>
+
+             </div>
+
+            </div>
+            <div class="col-sm-6">
+
+             <div class="form-group">
+              <label for="costPrice">Cost Price</label> <input type="text" name="costPrice" id="costPrice" placeholder="Enter Product Cost Price" class="form-control">
+              <span class="text-danger">
+                @error('costPrice')
+                  {{ $message }}
+                @enderror
+              </span>
+             </div>
+
+             <div class="form-group">
+              <label for="salePrice">Sale Price</label> <input type="text" name="salePrice" id="salePrice" placeholder="Enter Product Sale Price" class="form-control">
+              <span class="text-danger">
+                @error('salePrice')
+                  {{ $message }}
+                @enderror
+              </span>
+             </div>
+
+             <div class="form-group">
+              <label for="quantity">Quantity</label> <input type="text" name="quantity" id="quantity" placeholder="Enter Product Quantity" class="form-control">
+              <span class="text-danger">
+                @error('quantity')
+                  {{ $message }}
+                @enderror
+              </span>
+             </div>
+
+             <div class="form-group">
+              <label for="status">Product Status</label>
+              <select name="status" id="status" class="form-control">
+                <option value="">-----Select Status-----</option>
+                <option value="1">Active</option>
+                <option value="2">Inactive</option>
+              </select>
+             </div>
+
+             <div class="form-group">
+               <button class="form-control btn btn-info" >Add Product</button>
+             </div>
+
+            </div>
+          </div><!-- col-3 -->
+        </form>
+
+
+
+        @foreach($data->project_details as $item)
+                  {{$item->title}}
+                  @endforeach
+
+
+
+                   $teachercount=(int) $row['teachercount'];
+                        if($teachercount < 3)
+                        {  
+
+                        ?>

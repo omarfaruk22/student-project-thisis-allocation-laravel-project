@@ -1,0 +1,28 @@
+'year',
+        'program',
+        'phase',
+        's_id',
+        'name',
+        'email',
+        'phone','cgpa','supervisor','project','description','date'
+
+
+        $table->id();
+            $table->string('semister');
+            $table->string('year');
+            $table->string('program');
+            $table->string('phase');
+            $table->string(' s_id')->nullable();
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('cgpa');
+            $table->string('supervisor');
+            $table->string('project');
+            $table->string('description');
+            $table->date('date');
+            $table->timestamp('email_verified_at')->nullable();
+            $table->timestamps();
+
+
+            

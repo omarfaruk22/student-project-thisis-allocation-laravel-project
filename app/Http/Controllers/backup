@@ -1,0 +1,44 @@
+ <div class="row">
+            <div class="col-md-5">
+            <div class="card" >
+               <h3 style="color:blue;background-color:#d1d1e0;" class="card-title text-center py-3 my-0">Send Message</h3>
+            <div class="card-body" style="overflow:auto; height:200px;">
+            <div class="message">
+              @foreach($studentshows as $data)
+            <hr>
+        <p class="card-text"> {{$data->comment_des}}</p>
+       
+        <span style="color:blue;"> Sent by: {{$data->faculty_shows->fname}} <i class="fa fa-calendar"> {{$data->created_at }}</i></span>
+        <hr>
+        @endforeach
+        </div>
+      <!-- Additional content here that will scroll -->
+         </div>
+             
+              </div>
+  
+            
+              
+            </div>
+            <div class="col-md-5">
+            <div class="card">
+               <h3 style="color:blue;background-color:#d1d1e0" class="card-title text-center py-3 my-0">Received Message</h3>
+            <div class="card-body" style="overflow:auto; height:200px;">
+            <div class="message">
+            @foreach($studentshow as $item)
+            <hr>
+        <p class="card-text"> {{$item->post_des}}</p>
+       
+        <span style="color:blue;"> Received from:{{$item->faculty_show->fname}} <i class="fa fa-calendar"> {{$item->created_at }}</i></span>
+        <hr>
+        @endforeach
+        </div>
+        
+        
+      <!-- Additional content here that will scroll -->
+         </div>
+             
+              </div>
+              
+            </div>
+          </div>

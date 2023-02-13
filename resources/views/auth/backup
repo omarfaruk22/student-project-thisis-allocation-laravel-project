@@ -1,0 +1,81 @@
+<?php
+
+namespace App\Http\Controllers\Faculty\Auth;
+
+use App\Http\Controllers\Controller;
+use App\Models\Faculty;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules;
+
+class RegisteredUserController extends Controller
+{
+    /**
+     * Display the registration view.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function create()
+    {
+        return view('Faculty.auth.register');
+    }
+    public function fymanage(){
+        $faculty=Faculty::orderby('id','asc')->get();
+
+        return view('Faculty.auth.manageFaculty', compact('faculty'));
+  
+      }
+      public function edit($id){
+
+        $facalties=Faculty::find($id);
+        return view('Faculty.auth.editFaculty', compact('facalties'));
+
+      }
+      public function update(Request $request, $id){
+        $faculty =Faculty::find($id);
+        $faculty->fname= $request->fname;
+        $faculty->femail= $request->femail;
+        $faculty->password= $request->password;
+        $faculty->count= $request->count;
+        $faculty->update();
+        return redirect()->route('fymanage');
+
+
+    }
+
+      public function delete($id){
+        $delete=Faculty::find($id);
+        $delete->delete();
+        return redirect()->route('fymanage');
+
+        
+    }
+
+    /**
+     * Handle an incoming registration request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+            'fname' => ['required', 'string', 'max:255'],
+            'femail' => ['required', 'string', 'email', 'max:255', 'unique:faculties'],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ]);
+
+        $faculty = Faculty::create([
+            'fname' => $request->fname,
+            'femail' => $request->femail,
+            'password' => Hash::make($request->password),
+        ]);
+
+       
+    }
+}
