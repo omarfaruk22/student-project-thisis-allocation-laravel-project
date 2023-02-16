@@ -58,8 +58,8 @@
        <form id="insertform" method="post">
         @csrf
         
-        <input type="text" name="group_id" id="group_id" value="{{$data->group_id}}">
-        <input type="text" name="faculty_id" id="faculty_id" value="{{$data->supervisor}}">
+        <input type="hidden" name="group_id" id="group_id" value="{{$data->group_id}}">
+        <input type="hidden" name="faculty_id" id="faculty_id" value="{{$data->supervisor}}">
         <div class="form-group">
               <label for="comment_des">Message</label> 
               <textarea type="text" name="comment_des" id="comment_des" placeholder="text a message" rows="3"class="form-control rounded-0" required></textarea>

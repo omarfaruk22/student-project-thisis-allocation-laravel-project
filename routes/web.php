@@ -149,11 +149,14 @@ Route::group(['prefix'=>'/st_group'],function(){
                     
                     Route::get('contacts',[Contactcontroller::class, 'index'])->name('contactst');
                     
-                    Route::get('allocatshow',[allocationcontroller::class, 'adminallocatshow'])->name('allocatshowadmin');
+                    Route::get('allocatshows',[allocationcontroller::class, 'adminallocatshow'])->name('allocatshowadmin');
                     Route::post('contact',[Contactcontroller::class, 'store'])->name('contactstore');
-            
+                    
+                    Route::get('allocatshow/{id}',[allocationcontroller::class, 'destroy'])->name('stallocatshow');
                     });
-                  
+
+                    Route::get('allocatedit/{id}',[allocationcontroller::class, 'editallocatadmin'])->name('editallocat');
+                    Route::post('allocatupdate/{id}',[allocationcontroller::class, 'updateallocatadmin'])->name('updateallocat');
 
                    
     

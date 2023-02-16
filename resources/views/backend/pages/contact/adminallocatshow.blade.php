@@ -20,8 +20,10 @@
                 <tr>
                   <td>#Sl</td>
                   <td>Group Name</td>
+                  <td>Faculty Name</td>
                   <td>Research Field</td>
                   <td>Description</td>
+                  <td>Status</td>
                   <td>Action</td>
                 </tr>
               </thead> 
@@ -32,9 +34,24 @@
                   <tr>
                     <td>{{ $sl }}</td>
                     <td>{{ $data->group_info->gname }}</td>
+                    <td>{{ $data->faculty_info->fname }}</td>
                     <td>{{ $data->project_info->title }}</td>
                     <td>{{ $data->project_info->description }}</td>
-                  
+                    <td>
+                      @if ($data->status==0)
+                      <span class="badge badge-sm btn-info">Pending</span>
+                      @elseif(($data->status==1))
+                      <span class="badge badge-danger">Rejected</span>
+                      @elseif(($data->status==2))
+                      <span class="badge badge-success">Approved</span>
+                      @else
+                      <span class="badge badge-info">Panding</span>
+                      @endif
+                    </td>
+                    <td>
+                      <!-- <a href="#" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a> -->
+                      <a href="{{route('editallocat',$data->id )}}"  class="btn btn-sm btn-info"><i class="fa fa-edit" ></i></a>
+                    </td>
                     <td>
                       <!-- <a href="#" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a> -->
                       <button class="btn btn-sm btn-dark"><i class="fas fa-eye" data-target='#delete{{ $data->id }}' data-toggle="modal"></i></button>

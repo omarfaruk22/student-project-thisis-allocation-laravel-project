@@ -182,54 +182,71 @@
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="section-title text-center position-relative mb-5">
-                <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Developers</h6>
-                <h1 class="display-4">Meet Our Developers</h1>
+                <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Instractors</h6>
+                <h1 class="display-4">Meet Our Instractors</h1>
             </div>
             <div class="owl-carousel team-carousel position-relative" style="padding: 0 30px;">
                 <div class="team-item">
-                    <img style="height:300px;" class="img-fluid w-100 " src="{{asset('frontend/img/1.jpg')}}" alt="">
+                    <img style="height:250px;width:200px;" class="img-fluid w-100 " src="{{asset('frontend/img/f1.jfif')}}" alt="">
                     <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Omar Faruk</h5>
-                        <p class="mb-2">Web Design & Development</p>
+                        <h5 class="mb-3">Adnan Ferdous Ashrafi</h5>
+                        <p class="mb-2">Senior Lecturer</p>
                         <div class="d-flex justify-content-center">
-                        <a class="mx-1 p-1" href="https://github.com/omarfaruk22"><i class="fab fa-github"></i></a>
-                        <a class="mx-1 p-1" href="https://www.linkedin.com/in/omar-faruk-002793257/"><i class="fab fa-linkedin-in"></i></a>
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <img style="height:250px;width:200px;" class="img-fluid w-100 " src="{{asset('frontend/img/f2.jfif')}}" alt="">
+                    <div class="bg-light text-center p-4">
+                        <h5 class="mb-3">Shifat Shamin Shapla</h5>
+                        <p class="mb-2">Senior Lecturer</p>
+                        <div class="d-flex justify-content-center">
+                        
                             
                         </div>
                     </div>
                 </div>
                 <div class="team-item">
-                    <img style="height:300px;" class="img-fluid w-100 " src="{{asset('frontend/img/team-3.jpg')}}" alt="">
+                    <img style="height:250px;width:200px;" class="img-fluid w-100 " src="{{asset('frontend/img/f1.jfif')}}" alt="">
                     <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Fahima Riya</h5>
-                        <p class="mb-2">Web Design & Development</p>
+                        <h5 class="mb-0">Muhammed Yaseen Morshed Adib</h5>
+                        <p class="mb-0">Lecturer</p>
                         <div class="d-flex justify-content-center">
-                        <a class="mx-1 p-1" href="#"><i class="fab fa-github"></i></a>
-                        <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        
                             
                         </div>
                     </div>
                 </div>
                 <div class="team-item">
-                    <img style="height:300px;" class="img-fluid w-100 " src="{{asset('frontend/img/1.jpg')}}" alt="">
+                    <img style="height:250px;width:200px;" class="img-fluid w-100 " src="{{asset('frontend/img/f1.jfif')}}" alt="">
                     <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Omar Faruk</h5>
-                        <p class="mb-2">Web Design & Development</p>
+                        <h5 class="mb-3">Tamjid Rahman</h5>
+                        <p class="mb-2">Assistant Professor</p>
                         <div class="d-flex justify-content-center">
-                        <a class="mx-1 p-1" href="https://github.com/omarfaruk22"><i class="fab fa-github"></i></a>
-                        <a class="mx-1 p-1" href="https://www.linkedin.com/in/omar-faruk-002793257/"><i class="fab fa-linkedin-in"></i></a>
+                        
                             
                         </div>
                     </div>
                 </div>
                 <div class="team-item">
-                    <img style="height:300px;" class="img-fluid w-100 " src="{{asset('frontend/img/team-3.jpg')}}" alt="">
+                    <img style="height:250px;width:200px;" class="img-fluid w-100 " src="{{asset('frontend/img/f2.jfif')}}" alt="">
                     <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Fahima Riya</h5>
-                        <p class="mb-2">Web Design & Development</p>
+                        <h5 class="mb-3">Tamanna Haque Nipa</h5>
+                        <p class="mb-2">Assistant Professor</p>
                         <div class="d-flex justify-content-center">
-                        <a class="mx-1 p-1" href="#"><i class="fab fa-github"></i></a>
-                        <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+             
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <img style="height:250px;width:200px;" class="img-fluid w-100 " src="{{asset('frontend/img/f1.jfif')}}" alt="">
+                    <div class="bg-light text-center p-4">
+                        <h5 class="mb-3">Tarikuzzaman Emon</h5>
+                        <p class="mb-2">Assistant Professor</p>
+                        <div class="d-flex justify-content-center">
+             
                             
                         </div>
                     </div>

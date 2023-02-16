@@ -19,6 +19,7 @@
               <thead>
                 <tr>
                   <td>#Sl</td>
+                  <td>Group ID</td>
                   <td>Group Name</td>
                   <td>Action</td>
                 </tr>
@@ -29,6 +30,7 @@
                 @foreach ($groups as $data)
                   <tr>
                     <td>{{ $sl }}</td>
+                    <td>{{ $data->id }}</td>
                     <td>{{ $data->gname }}</td>
                   
                     <td>

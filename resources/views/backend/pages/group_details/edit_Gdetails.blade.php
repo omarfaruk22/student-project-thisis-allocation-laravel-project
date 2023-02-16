@@ -27,7 +27,7 @@
              </div>
 
              <div class="form-group">
-               <button class="form-control btn btn-info" >Update Studend group details</button>
+               <button class="form-control btn btn-info" >Update Student group details</button>
              </div>
 
             </div>

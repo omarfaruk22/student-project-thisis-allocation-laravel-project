@@ -39,7 +39,6 @@ class RegisteredUserController extends Controller
         $user->name= $request->name;
         $user->email= $request->email;
         $user->role= $request->role;
-        $user->password= $request->password;
         $user->update();
         return redirect()->route('fmanage');
 

@@ -63,7 +63,7 @@
         </button>
       </div>
       <div class="modal-body">
-        Are you sure want to delete this product?
+        Are you sure want to delete this user?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

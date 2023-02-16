@@ -11,7 +11,12 @@
     </div>
    </div>
 
+
       <div class="br-pagebody">
+      @if(session()->has('message'))
+          <button style="color:green; font-size: 20px;">{{session('message')}} </button>
+      
+          @endif
         <div class="row">
           <div class="col-md-12">   
           	  <div class="msg"></div>
@@ -36,7 +41,21 @@
                     <td>{{$data->faculty_info->fname}}</td>
                     <td>{{ $data->project_info->title }}</td>
                     <td>{{ $data->project_info->description }}</td>
-                  
+                    <td>
+                      <!-- <a href="#" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a> -->
+                      <a href="{{route('stallocatshow',$data->id)}}" class="myButton btn btn-sm btn-danger"><i class="fas fa-edit"></i>try again</a>
+                    </td>
+                    <td>
+                      @if ($data->status==0)
+                      <span class="btn btn-sm btn-info">Pending</span>
+                      @elseif(($data->status==1))
+                      <span class="btn btn-sm btn-danger">Rejected</span>
+                      @elseif(($data->status==2))
+                      <span class="btn btn-sm btn-success">Approved</span>
+                      @else
+                      <span class="badge badge-info">Panding</span>
+                      @endif
+                    </td>
                     <td>
                       <!-- <a href="#" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a> -->
                       <button class="btn btn-sm btn-dark"><i class="fas fa-eye" data-target='#delete{{ $data->id }}' data-toggle="modal"></i></button>
@@ -59,7 +78,7 @@
                 <div class="card " style="width: 14rem; background-color:#e6ffff" >
          <!-- <img class="card-img-top" src="path/to/image.jpg" alt="Card image cap"> -->
         <div class="card-body">
-        <h5 class="card-title">Stusent Id: {{ $item->student_id }}</h5>
+        <h5 class="card-title">Student Id: {{ $item->student_id }}</h5>
         <h6> Name: {{ $item->name }}</h6>
          <p class="card-text">Email: {{ $item->email }}</p>
          <span>Phone: {{ $item->phone }}</span>
@@ -112,4 +131,5 @@
       </div>
 </div>
 <!-- br-pagebody -->
+
 @endsection

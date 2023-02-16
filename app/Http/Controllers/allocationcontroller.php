@@ -29,7 +29,7 @@ class allocationcontroller extends Controller
     public function create()
     {
        $test1=auth::guard('faculty')->user();
-      $show=Allocation::where('supervisor',$test1->id)->with('allocations','group_info','faculty_info','project_info')->get();
+      $show=Allocation::where('supervisor',$test1->id)->where('status',2)->with('allocations','group_info','faculty_info','project_info')->get();
      
      return view('faculty_DBD.pages.allocated.allocation_show', compact('show'));
     }
@@ -147,9 +147,9 @@ class allocationcontroller extends Controller
      */
     public function adminshow($id)
     {
-        $shows=Allocation::where('group_id',$id)->with('allocations','group_info','faculty_info','project_info')->get();
+        // $shows=Allocation::where('group_id',$id)->with('allocations','group_info','faculty_info','project_info')->get();
  
-        return view('student_DBD.pages.allocat_s_show', compact('shows'));
+        // return view('student_DBD.pages.allocat_s_show', compact('shows'));
     }
 
     /**
@@ -166,14 +166,40 @@ class allocationcontroller extends Controller
       return view('backend.pages.contact.adminallocatshow', compact('adminshow'));
     }
 
+    // this is allocatted group status edit 
+    public function editallocatadmin($id){
+        $allocatedit=Allocation::with('allocations','group_info','faculty_info','project_info')->find($id);
+        return view('backend.pages.contact.edit_allocat',compact('allocatedit'));
+
+    }
+    // this is allocatted group status update 
+    public function updateallocatadmin(Request $request, $id){
+    $allocatgroup =Allocation::find($id);
+    $allocatgroup->status= $request->status;
+    $allocatgroup->update();
+    return redirect()->route('allocatshowadmin');
+    }
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
     public function destroy($id)
     {
-        //
+      $alls=Allocation::where('group_id',$id)->where('status',1)->first();
+      if(!$alls){
+        return redirect()->back()->with('message','Sorry,If You rejected by Admin then You are available for this');
+
+      }else{
+        $delete=Allocation::find($id);
+        $delete->delete();
+        $delete1=Allocation_detail::where('allocation_id',$id)->delete();
+        
+        
+        return redirect()->route('check')->with('message','Please try Again another supervisor');
+
+      }
     }
 }
