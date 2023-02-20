@@ -23,7 +23,7 @@
             <span class="menu-item-label">Faculty</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="{{Route('fregister')}}" class="sub-link">Register Faculty</a></li>
+            <li class="sub-item"><a href="{{Route('fregister')}}" class="sub-link">Assign Faculty</a></li>
             <li class="sub-item"><a href="{{Route('fymanage')}}" class="sub-link">Manage Faculty</a></li>
           </ul>
         </li>
@@ -55,11 +55,11 @@
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
           <i class="fa fa-book"></i>
-            <span class="menu-item-label">Research Fields</span>
+            <span class="menu-item-label">Area of Interest</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="{{Route('pcreate')}}" class="sub-link">Add Research Fields</a></li>
-            <li class="sub-item"><a href="{{Route('pmanage')}}" class="sub-link">manage Research Fields</a></li>
+            <li class="sub-item"><a href="{{Route('pcreate')}}" class="sub-link">Add Area of Interest</a></li>
+            <li class="sub-item"><a href="{{Route('pmanage')}}" class="sub-link">manage Area of Interest</a></li>
           </ul>
         </li>
      

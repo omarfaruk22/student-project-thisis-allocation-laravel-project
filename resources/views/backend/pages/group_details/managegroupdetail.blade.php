@@ -21,6 +21,7 @@
                   <td>#Sl</td>
                   <td>Group Id</td>
                   <td>Student Id</td>
+                  <td>Session</td>
                   <td>Action</td>
                 </tr>
               </thead> 
@@ -32,7 +33,7 @@
                     <td>{{ $sl }}</td>
                     <td>{{ $data->group_id }}</td>
                     <td>{{ $data->student_id }}</td>
-                  
+                    <td>{{ $data->semister }}-{{$data->session}}</td>
                     <td>
                       <a href="{{ Route('dedit', $data->id) }}" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
                       <button class="btn btn-sm btn-danger"><i class="fa fa-trash" data-target='#delete{{ $data->id }}' data-toggle="modal"></i></button>

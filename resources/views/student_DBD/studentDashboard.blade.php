@@ -25,7 +25,7 @@ $projectview=Project::with('fuculty_details')->orderby('id','asc')->paginate(5);
                 <tr>
                   <td>#Sl</td>
                   <td>supervisor Name</td>
-                  <td>Research Fields</td>
+                  <td>Area of Interest</td>
                   <td>Description</td>
                 </tr>
               </thead> 
@@ -56,8 +56,8 @@ $projectview=Project::with('fuculty_details')->orderby('id','asc')->paginate(5);
       </div><!-- br-pagebody -->
       <footer class="br-footer">
         <div class="footer-left ">
-          <div class="mg-b-2">Copyright &copy; 2017. Bracket Plus. All Rights Reserved.</div>
-          <div>Attentively and carefully made by ThemePixels.</div>
+          <div class="mg-b-2">Copyright &copy; 2023.student project allocation & management system.</div>
+          <div>Attentively and carefully made.</div>
         </div>
         <div class="footer-right d-flex align-items-center">
           <span class="tx-uppercase mg-r-10">Share:</span>

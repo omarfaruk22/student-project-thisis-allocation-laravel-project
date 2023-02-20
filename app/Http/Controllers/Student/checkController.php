@@ -54,7 +54,7 @@ class checkController extends Controller
        
        
         $group_id = group::where('id',$request->id)->with('group_details')->first();
-        $project=Faculty::with('project_details')->get();
+        $project=Faculty::with('project_details')->where('status', 1)->get();
         $paygroup = Payment::where('st_group_id',$request->id)->where('status',1)->first();
     
       //dd($group_id);

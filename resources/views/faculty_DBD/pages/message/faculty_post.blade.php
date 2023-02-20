@@ -25,7 +25,7 @@
                 <tr>
                 <td>#Sl</td>
                   <td>Group Name</td>
-                  <td>Research Field</td>
+                  <td>Area of Interest</td>
                   <td>Description</td>
                   <td>Action</td>
                 </tr>

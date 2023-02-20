@@ -22,7 +22,7 @@
                   <td>Faculty Name</td>
                   <td>Email</td>
                   <!-- <td>Password</td> -->
-                  
+                  <td>Status</td>
                   <td>Action</td>
                 </tr>
               </thead> 
@@ -34,8 +34,15 @@
                     <td>{{ $sl }}</td>
                     <td>{{ $data->fname }}</td>
                     <td>{{ $data->femail }}</td>
-                    <!-- <td>{{ $data->password }}</td> -->
-                   
+                    <td>
+                    @if ($data->status==0)
+                      <span class="badge badge-sm btn-info">inactive</span>
+                      @elseif(($data->status==1))
+                      <span class="badge badge-success">active</span>
+                      @else
+                      <span class="badge badge-danger">error</span>
+                      @endif
+                    </td>
                   
                     
                   

@@ -17,7 +17,6 @@ return new class extends Migration
             $table->increments('id');
             $table->tinyInteger('group_id');
             $table->string('student_id');
-
             $table->timestamps();
         });
     }

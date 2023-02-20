@@ -6,8 +6,8 @@
 <div class="br-pagetitle">
     <i class="icon ion-ios-home-outline"></i>
     <div>
-      <h4>Edit Research Fields  Page</h4>
-      <p class="mg-b-0">Edit Research Fields Details</p>
+      <h4>Area of Interest</h4>
+      <p class="mg-b-0">Edit Area of Interest</p>
     </div>
 </div>
 
@@ -27,8 +27,8 @@
              </div>
 
           	 <div class="form-group">
-              <label for="title">Research Fields</label> 
-              <input type="text" name="title" id="title" placeholder="Enter Research Fields" class="form-control" value="{{ $projects->title }}">
+              <label for="title">Area of Interest</label> 
+              <input type="text" name="title" id="title" placeholder="Area of Interest" class="form-control" value="{{ $projects->title }}">
              </div>
              <div class="form-group">
               <label for="description"> Description</label> 
@@ -42,7 +42,7 @@
             
 
              <div class="form-group">
-               <button class="form-control btn btn-info" >Update Research Fields Details</button>
+               <button class="form-control btn btn-info" >Update Area of Interest Details</button>
              </div>
 
             </div>

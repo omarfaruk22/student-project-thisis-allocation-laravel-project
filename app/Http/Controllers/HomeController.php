@@ -27,7 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $allocat=Allocation::count();
+        $allocat=Allocation::where('status',0)->count();
         $pay=Payment::where('status', 0)->count();
         $faculty=Faculty::count();
         $field=Project::count();

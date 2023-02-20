@@ -45,11 +45,6 @@
               <select name="year" id="year" required >
                 <option value="">--Select Year--</option>
                 <option value="2023">2023</option>
-                <option value="2022">2022</option>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
-            
-            
               </select>
               
              </div>
@@ -167,7 +162,7 @@
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-            <label for="project">Project/Thisis</label>
+            <label for="project">Area of Interest</label>
               <select name="project" id="project" class="form-control" required>
                 <option value="">--Select Project/Thisis--</option>
            

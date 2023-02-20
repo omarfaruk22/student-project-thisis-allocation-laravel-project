@@ -14,10 +14,10 @@
             <div class="navbar-nav mx-auto py-0">
 
             <a href="{{route('landinghome')}}" class="nav-item nav-link <?php echo ($currentPage == 'home') ? 'active' : ''; ?>">Home</a>
-<a href="{{route('landingabout')}}" class="nav-item nav-link <?php echo ($currentPage == 'about') ? 'active' : ''; ?>">About</a>
-<a href="{{route('landingfield')}}" class="nav-item nav-link <?php echo ($currentPage == 'field') ? 'active' : ''; ?>">Research Field</a>          
-<a href="{{route('landingcontact')}}" class="nav-item nav-link <?php echo ($currentPage == 'contact') ? 'active' : ''; ?>">Contact</a>
-</div>
+            <a href="{{route('landingabout')}}" class="nav-item nav-link <?php echo ($currentPage == 'about') ? 'active' : ''; ?>">About</a>
+            <a href="{{route('landingfield')}}" class="nav-item nav-link <?php echo ($currentPage == 'field') ? 'active' : ''; ?>">Area of Interest</a>          
+            <a href="{{route('landingcontact')}}" class="nav-item nav-link <?php echo ($currentPage == 'contact') ? 'active' : ''; ?>">Contact</a>
+            </div>
                 <!-- <div class="nav-item dropdown">
                   <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block nav-link dropdown-toggle" data-toggle="dropdown">Login/Register</a>  
                   <div class="dropdown-menu m-0">

@@ -21,7 +21,7 @@ class messageController extends Controller
         $test3=auth::guard('faculty')->user();
         $facultyshow=Post::where('faculty_id',$test3->id)->with('group_show','faculty_show')->get();
         $facultyshows=Comment::where('faculty_id',$test3->id)->with('group_shows','faculty_shows')->get();
-        $message=Allocation::where('supervisor',$test3->id)->with('allocations','group_info','faculty_info','project_info')->get();
+        $message=Allocation::where('supervisor',$test3->id)->where('status',2)->with('allocations','group_info','faculty_info','project_info')->get();
      
        return view('faculty_DBD.pages.message.faculty_post',compact('message','test3','facultyshow','facultyshows'));
     }
@@ -81,7 +81,7 @@ class messageController extends Controller
     {
         $studentshow=Post::where('group_id',$request->id)->with('group_show','faculty_show')->get();
         $studentshows=Comment::where('group_id',$request->id)->with('group_shows','faculty_shows')->get();
-        $message1=Allocation::where('group_id',$request->id)->with('allocations','group_info','faculty_info','project_info')->get();
+        $message1=Allocation::where('group_id',$request->id)->where('status',2)->with('allocations','group_info','faculty_info','project_info')->get();
         if($message1){
             return view('student_DBD.pages.message.student_comment',compact('message1','studentshow','studentshows'));
             

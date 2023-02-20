@@ -18,7 +18,7 @@
        use Illuminate\Support\Facades\Auth;
 
        $user=Auth::guard('faculty')->user();
-       $allocats=Allocation::where('supervisor',$user->id)->count();
+       $allocats=Allocation::where('supervisor',$user->id)->where('status',2)->count();
        $comments=Comment::where('faculty_id',$user->id)->count();
        
        ?>

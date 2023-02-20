@@ -6,8 +6,8 @@
 <div class="br-pagetitle">
     <i class="icon ion-ios-home-outline"></i>
     <div>
-      <h4>Project details page</h4>
-      <p class="mg-b-0">Project Manage</p>
+      <h4>Area of Interest details page</h4>
+      <p class="mg-b-0">Area of Interest Manage</p>
     </div>
 </div>
 
@@ -20,10 +20,9 @@
                 <tr>
                   <td>#Sl</td>
                   <td>Faculty Id</td>
-                  <td>Research Fields</td>
+                  <td>Area of Interest</td>
                   <td>Description</td>
                   <td>image</td>
-
                   <td>Action</td>
                 </tr>
               </thead> 
@@ -54,7 +53,7 @@
         </button>
       </div>
       <div class="modal-body">
-        Are you sure want to delete this Research Fields?
+        Are you sure want to delete this Area of interest?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

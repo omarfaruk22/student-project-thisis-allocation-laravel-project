@@ -20,7 +20,7 @@
                 <tr>
                   <td>#Sl</td>
                   <td>Group Name</td>
-                  <td>Research Field</td>
+                  <td>Area of Interest</td>
                   <td>Description</td>
                   <td>Action</td>
                 </tr>
@@ -77,7 +77,7 @@
                     <div class="col-md-2"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 ml-4">Research Fields: {{ $data->project_info->title }}</div>
+                    <div class="col-md-12 ml-4">Area of Interest: {{ $data->project_info->title }}</div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 ml-4"> Description: {{ $data->project_info->description }}</div>

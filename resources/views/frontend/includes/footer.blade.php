@@ -11,7 +11,7 @@
                    
                 </div>
                 <div class="col-md-4 mb-5">
-                    <h3 class="text-white mb-4">Research Fields</h3>
+                    <h3 class="text-white mb-4">Area of Interest</h3>
                     <div class="d-flex flex-column justify-content-start">
                         <a class="text-white-50 mb-2" href="{{route('landingfield')}}"><i class="fa fa-angle-right mr-2"></i>Fields</a>
                        

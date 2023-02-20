@@ -6,8 +6,8 @@
 <div class="br-pagetitle">
     <i class="icon ion-ios-home-outline"></i>
     <div>
-      <h4>Add Research Field</h4>
-      <p class="mg-b-0">Research Details</p>
+      <h4>Area of Interest </h4>
+      <p class="mg-b-0">Add Area of Interest</p>
     </div>
 </div>
 
@@ -27,8 +27,8 @@
              </div>
 
           	 <div class="form-group">
-              <label for="title">Research Field</label> 
-              <input type="text" name="title" id="title" placeholder="Enter Research Field" class="form-control" value="{{ old('title') }}">
+              <label for="title">Area of Interest</label> 
+              <input type="text" name="title" id="title" placeholder="Area of Interest" class="form-control" value="{{ old('title') }}">
               <span class="text-danger">
                 @error('title')
                   {{ $message }}
@@ -55,7 +55,7 @@
              </div>
 
              <div class="form-group">
-               <button class="form-control btn btn-info" >Add Research Field</button>
+               <button class="form-control btn btn-info" >Add Area of Interest</button>
              </div>
 
             </div>

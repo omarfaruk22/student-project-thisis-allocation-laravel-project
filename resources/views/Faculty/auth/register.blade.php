@@ -55,7 +55,7 @@
            
 
              <div class="form-group">
-               <button class="form-control btn btn-info" >Register Users</button>
+               <button class="form-control btn btn-info" >Assign Faculty</button>
              </div>
 
             </div>

@@ -20,7 +20,7 @@
               <div class="pd-x-20 pd-t-20 d-flex align-items-center">
                 <i class="fa fa-users  tx-40 lh-0 tx-white op-5"></i>
                 <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Allocated Group</p>
+                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Allocated Group Pending</p>
                   <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">{{$allocat}}</p>
                   <span><a  style="color:white; "href="{{route('allocatshowadmin')}}">view details</a></span>
                 </div>

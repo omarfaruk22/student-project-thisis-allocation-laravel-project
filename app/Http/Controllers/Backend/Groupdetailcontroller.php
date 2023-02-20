@@ -48,6 +48,8 @@ class Groupdetailcontroller extends Controller
         ]); 
         $St_group_detail->group_id= $request->group_id;
         $St_group_detail->student_id= $request->student_id;
+        $St_group_detail->semister= $request->semister;
+        $St_group_detail->session= $request->session;
       
         $St_group_detail->save();
         return redirect()->route('dcreate');
@@ -88,6 +90,8 @@ class Groupdetailcontroller extends Controller
         $group_details =St_group_detail::find($id);
         $group_details->group_id= $request->group_id;
         $group_details->student_id= $request->student_id;
+        $group_details->semister= $request->semister;
+        $group_details->session= $request->session;
         $group_details->update();
         return redirect()->route('dmanage');
     }

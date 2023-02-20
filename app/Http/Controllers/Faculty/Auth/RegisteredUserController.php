@@ -102,7 +102,7 @@ class RegisteredUserController extends Controller
         $faculty =Faculty::find($id);
         $faculty->fname= $request->fname;
         $faculty->femail= $request->femail;
-        $faculty->password= $request->password;
+        $faculty->status= $request->status;
         $faculty->update();
         return redirect()->route('fymanage');
 

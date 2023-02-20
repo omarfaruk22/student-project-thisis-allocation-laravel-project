@@ -137,7 +137,7 @@
             <div class="col-lg-6">
                 <div class="section-title text-center position-relative mb-4">
                     <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Project or thisis area</h6>
-                    <h1 class="display-4">Check Research Field</h1>
+                    <h1 class="display-4">Check Area of Interest</h1>
                 </div>
             </div>
         </div>
@@ -297,7 +297,7 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="section-title position-relative mb-4">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Need Help?</h6>
+                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Contact</h6>
                         <h1 class="display-4">Send Us A Message</h1>
                     </div>
                     <div class="contact-form">

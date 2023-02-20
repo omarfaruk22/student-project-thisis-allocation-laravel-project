@@ -69,14 +69,14 @@ class allocationcontroller extends Controller
            
        
          }else{
-
-           $field=Allocation::where('supervisor',  $request->supervisor)->count();
+           
+           $field=Allocation::where('supervisor',  $request->supervisor)->where('semister',$request->semister)->where('year',$request->year)->count();
 
             if($field>=4){
 
                
                 
-                return redirect()->route('check')->with('message','this faculty already booked');
+                return redirect()->route('check')->with('message','This facility has already been reserved for the semester.');
                 
 
                 

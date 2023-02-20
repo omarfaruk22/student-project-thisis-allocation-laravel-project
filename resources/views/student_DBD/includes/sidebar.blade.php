@@ -1,4 +1,4 @@
-<div class="br-logo"><a href=""><span>[</span>Student </i><span>]</span></a></div>
+<div class="br-logo"><a href=""><span>[</span>Student <i>Panel</i><spa n>]</span></a></div>
     <div class="br-sideleft sideleft-scrollbar">
       <label class="sidebar-label">Navigation</label>
       <ul class="br-sideleft-menu">

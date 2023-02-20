@@ -8,7 +8,7 @@
   <body>
 
     <!-- ########## START: LEFT PANEL ########## -->
-    <div class="br-logo"><a href=""><span>[</span>Faculty <i>Page</i><span>]</span></a></div>
+    <div class="br-logo"><a href=""><span>[</span>Faculty <i>Panel</i><span>]</span></a></div>
    <!-- this is left side var  -->
  @include('faculty_DBD.includes.sidebar')
 
