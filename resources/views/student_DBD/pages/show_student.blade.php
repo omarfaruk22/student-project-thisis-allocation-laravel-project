@@ -22,7 +22,7 @@
                   <td>Student Name</td>
                   <td>Email</td>
                   <!-- <td>Password</td>  -->
-                  <td>phone</td> 
+                  <td>phone/User type</td> 
                   
                   
                 </tr>

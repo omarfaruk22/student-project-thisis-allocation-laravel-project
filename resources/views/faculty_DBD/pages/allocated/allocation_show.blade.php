@@ -77,10 +77,10 @@
                     <div class="col-md-2"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 ml-4">Area of Interest: {{ $data->project_info->title }}</div>
+                    <div class="col-md-12 ml-4"><span style="font-weight:bold;">Area of Interest:</span> {{ $data->project_info->title }}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 ml-4"> Description: {{ $data->project_info->description }}</div>
+                    <div class="col-md-12 ml-4"><span style="font-weight:bold;"> Description:</span> {{ $data->project_info->description }}</div>
                 </div>
                     
                     

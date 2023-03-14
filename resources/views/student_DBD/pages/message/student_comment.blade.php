@@ -25,6 +25,7 @@
                 <td>#Sl</td>
                   <td>Group Name</td>
                   <td>Area of Interest</td>
+                  <td>Supervisor Name</td>
                   <td>Description</td>
                   <td>Action</td>
                 </tr>
@@ -37,6 +38,7 @@
                   <td>{{ $sl }}</td>
                     <td>{{ $data->group_info->gname }}</td>
                     <td>{{ $data->project_info->title }}</td>
+                    <td>{{ $data->faculty_info->fname }}</td>
                     <td>{{ $data->project_info->description }}</td>
                   
                     <td>
